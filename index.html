@@ -72,15 +72,29 @@ nav a:hover::after{width:100%}
 .hero-facts div{font-size:14px;color:var(--ink-2)}
 .hero-facts strong{display:block;font:700 18px/1.3 var(--display);color:var(--ink)}
 
-.wings{position:relative;height:620px}
-.wing{position:absolute;overflow:hidden;box-shadow:0 30px 60px -25px rgba(13,31,45,.45)}
-.wing img{width:100%;height:100%;object-fit:cover}
-.wing-a{width:64%;height:74%;right:0;top:0;clip-path:polygon(10% 0,100% 0,100% 88%,0 100%)}
-.wing-b{width:50%;height:52%;left:0;bottom:30px;clip-path:polygon(0 8%,100% 0,90% 100%,0 100%)}
-.wing-c{width:30%;height:34%;right:4%;bottom:0;clip-path:polygon(0 0,100% 12%,100% 100%,14% 100%)}
-.wing-mark{position:absolute;left:30%;top:6%;width:120px;opacity:.9}
-.wing-label{position:absolute;left:4%;top:15%;background:#fff;padding:14px 18px;border-left:3px solid var(--amber);font-size:13px;color:var(--ink-2);max-width:200px;box-shadow:0 14px 30px -14px rgba(13,31,45,.3)}
-.wing-label b{display:block;font:700 15px/1.3 var(--display);color:var(--ink)}
+.hero-art{position:relative;height:640px}
+.art-block{position:absolute;right:0;top:48px;width:72%;height:80%;background:var(--sky);clip-path:polygon(12% 0,100% 0,100% 100%,0 100%);overflow:hidden}
+.art-block::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-55deg,rgba(255,255,255,.12) 0 2px,transparent 2px 22px)}
+.art-main{position:absolute;right:7%;top:0;width:68%;height:76%;overflow:hidden;clip-path:polygon(9% 0,100% 0,100% 90%,0 100%);box-shadow:0 30px 60px -25px rgba(13,31,45,.5)}
+.art-main img,.art-inset img{width:100%;height:100%;object-fit:cover}
+.art-main img{transform:scale(1.04);transition:transform 1.2s}
+.hero-art:hover .art-main img{transform:scale(1.1)}
+.art-inset{position:absolute;left:0;top:70px;width:36%;height:30%;border:8px solid #fff;transform:rotate(-4deg);box-shadow:0 24px 40px -20px rgba(13,31,45,.45);z-index:2;overflow:hidden}
+.art-card{position:absolute;left:4%;bottom:0;width:54%;background:var(--ink);color:#fff;padding:26px 26px 18px;z-index:3;box-shadow:0 34px 60px -28px rgba(13,31,45,.7);border-top:4px solid var(--amber)}
+.art-card-head{display:flex;gap:14px;align-items:center;padding-bottom:16px;margin-bottom:6px;border-bottom:1px solid rgba(255,255,255,.14)}
+.art-card-head img{width:52px;flex:none}
+.art-card-head b{display:block;font:700 19px/1.2 var(--display)}
+.art-card-head span{font-size:13.5px;color:#AFC2D0}
+.art-card ul{list-style:none}
+.art-card li a{display:flex;align-items:center;gap:14px;padding:9px 0;font-weight:600;font-size:15px;border-bottom:1px dashed rgba(255,255,255,.1);transition:.25s}
+.art-card li:last-child a{border-bottom:0}
+.art-card li i{font:italic 500 15px/1 var(--serif);color:var(--amber);width:20px}
+.art-card li a:hover{color:#9CC9E8;padding-left:6px}
+.art-badge{position:absolute;right:2%;bottom:30px;width:150px;height:150px;border-radius:50%;background:var(--amber);display:grid;place-items:center;z-index:3;box-shadow:0 20px 40px -18px rgba(246,141,31,.8)}
+.art-badge svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
+.art-badge text{font:700 12.5px var(--body);letter-spacing:.2em;fill:#fff}
+.art-badge img{width:58px;filter:brightness(0) invert(1)}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 .ticker{margin-top:70px;background:var(--sky);color:#fff;overflow:hidden;white-space:nowrap}
 .ticker-track{display:inline-flex;gap:56px;padding:18px 0;animation:tick 34s linear infinite;font:600 20px/1 var(--display)}
@@ -223,7 +237,7 @@ footer a:hover{color:var(--amber)}
   nav ul{gap:20px}
   .head-phone{display:none}
   .hero-grid,.sv-head,.sv-body,.areas-grid,.contact-box{grid-template-columns:1fr}
-  .wings{height:520px}
+  .hero-art{height:600px;max-width:640px}
   .sv-stage{display:none}
   .sv-thumb{display:block;grid-column:1/-1;height:200px;overflow:hidden;margin-top:6px}
   .sv-thumb img{width:100%;height:100%;object-fit:cover}
@@ -247,8 +261,14 @@ footer a:hover{color:var(--amber)}
 @media (max-width:600px){
   body{font-size:16px}
   .hero{padding-top:44px}
-  .wings{height:400px}
-  .wing-label{display:none}
+  .hero-art{height:560px}
+  .art-inset{display:none}
+  .art-main{width:88%;right:0;height:62%}
+  .art-block{width:80%}
+  .art-card{width:86%;left:0;padding:20px 20px 12px}
+  .art-badge{width:112px;height:112px;bottom:auto;top:-20px;right:auto;left:-6px}
+  .art-badge img{width:42px}
+  .art-badge text{font-size:11px}
   .sv-item a{grid-template-columns:44px 1fr auto;padding:24px 4px}
   .strip{grid-template-rows:200px 200px;grid-auto-columns:200px}
   .towns{columns:1}
@@ -308,11 +328,27 @@ footer a:hover{color:var(--amber)}
         <div><strong>CleanCheck Trained</strong>License #8131764</div>
       </div>
     </div>
-    <div class="wings rv">
-      <div class="wing wing-a"><img src="images/luxury-kitchen.jpg" alt="Spotless high-end kitchen after residential cleaning"></div>
-      <div class="wing wing-b"><img src="images/living-room.jpg" alt="Clean luxury living room with fireplace"></div>
-      <div class="wing wing-c"><img src="images/commercial-lights.jpg" alt="Commercial space cleaned by Dragonfly"></div>
-      <div class="wing-label"><b>No job too small</b>Homes and offices across the Calgary area</div>
+    <div class="hero-art rv">
+      <div class="art-block"></div>
+      <figure class="art-main"><img src="images/luxury-kitchen.jpg" alt="Spotless high-end kitchen after residential cleaning"></figure>
+      <figure class="art-inset"><img src="images/living-room.jpg" alt="Clean luxury living room with fireplace"></figure>
+      <div class="art-card">
+        <div class="art-card-head">
+          <img src="images/dragonfly-icon.png" alt="">
+          <div><b>No job too small</b><span>Homes and offices across the Calgary area</span></div>
+        </div>
+        <ul>
+          <li><a href="#services"><i>01</i>High-end Residential</a></li>
+          <li><a href="#services"><i>02</i>Commercial and Office</a></li>
+          <li><a href="#services"><i>03</i>Post Construction</a></li>
+          <li><a href="#services"><i>04</i>Carpet Cleaning</a></li>
+          <li><a href="#services"><i>05</i>High-Rise Buildings</a></li>
+        </ul>
+      </div>
+      <div class="art-badge" aria-hidden="true">
+        <svg viewBox="0 0 160 160"><defs><path id="circ" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs><text><textPath href="#circ">FLY INTO A CLEANER SPACE &#8226; CALGARY, AB &#8226; </textPath></text></svg>
+        <img src="images/dragonfly-icon.png" alt="">
+      </div>
     </div>
   </div>
   <div class="ticker" aria-hidden="true">
@@ -364,7 +400,7 @@ footer a:hover{color:var(--amber)}
               <span class="sv-num">04</span>
               <div><h3>Carpet Cleaning by Lotus Carpet Cleaning</h3><p>Expert carpet cleaning that brings back the look of your carpets.</p></div>
               <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-              <div class="sv-thumb"><img src="images/shelving-room.jpg" alt="" loading="lazy"></div>
+              <div class="sv-thumb"><img src="images/carpet-cleaning.jpg" alt="" loading="lazy"></div>
             </a>
           </li>
           <li class="sv-item" data-img="4">
@@ -372,7 +408,7 @@ footer a:hover{color:var(--amber)}
               <span class="sv-num">05</span>
               <div><h3>High-Rise Building Cleaning</h3><p>Exterior cleaning services for high-rise buildings.</p></div>
               <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-              <div class="sv-thumb"><img src="images/atrium-commercial.jpg" alt="" loading="lazy"></div>
+              <div class="sv-thumb"><img src="images/high-rise-exterior.jpg" alt="" loading="lazy"></div>
             </a>
           </li>
         </ul>
@@ -382,8 +418,8 @@ footer a:hover{color:var(--amber)}
         <figure class="on"><img src="images/living-room.jpg" alt=""><figcaption><span>01</span> &nbsp;Residential</figcaption></figure>
         <figure><img src="images/office-floor.jpg" alt=""><figcaption><span>02</span> &nbsp;Commercial &amp; Office</figcaption></figure>
         <figure><img src="images/post-construction-team.jpg" alt=""><figcaption><span>03</span> &nbsp;Post Construction</figcaption></figure>
-        <figure><img src="images/shelving-room.jpg" alt=""><figcaption><span>04</span> &nbsp;Carpet Cleaning</figcaption></figure>
-        <figure><img src="images/atrium-commercial.jpg" alt=""><figcaption><span>05</span> &nbsp;High-Rise Buildings</figcaption></figure>
+        <figure><img src="images/carpet-cleaning.jpg" alt=""><figcaption><span>04</span> &nbsp;Carpet Cleaning</figcaption></figure>
+        <figure><img src="images/high-rise-exterior.jpg" alt=""><figcaption><span>05</span> &nbsp;High-Rise Buildings</figcaption></figure>
       </div>
     </div>
   </div>
