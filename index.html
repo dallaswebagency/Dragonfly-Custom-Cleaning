@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dragonfly Custom Cleaning | Professional Cleaning Services in Calgary, AB</title>
+<meta name="description" content="Dragonfly Custom Cleaning Inc. offers high-end residential, commercial and office, post construction, carpet and high-rise building cleaning across Calgary and area. Call (403) 619-8966.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#2E90CF;
+  --sky-deep:#1C6FA6;
+  --amber:#F68D1F;
+  --amber-soft:#FDE7CF;
+  --ink:#0D1F2D;
+  --ink-2:#2B3A47;
+  --paper:#F5F2EC;
+  --mist:#E8EFF4;
+  --line:rgba(13,31,45,.14);
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Figtree',system-ui,sans-serif;
+  --serif:'Newsreader',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.tag{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--sky-deep);display:inline-flex;align-items:center;gap:10px}
+.tag::before{content:"";width:22px;height:2px;background:var(--amber)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--body);padding:16px 24px;border-radius:4px;transition:.25s}
+.btn-amber{background:var(--amber);color:#fff}
+.btn-amber:hover{background:#e07a0d;transform:translateY(-2px)}
+.btn-line{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* utility bar */
+.util{background:var(--ink);color:#C9D6E0;font-size:13.5px}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0;flex-wrap:wrap}
+.util span b{color:#fff;font-weight:600}
+.util .right{display:flex;gap:22px}
+.util a:hover{color:var(--amber)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(245,242,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:24px}
+.logo img{height:46px;width:auto}
+nav ul{display:flex;gap:30px;list-style:none}
+nav a{font-weight:500;font-size:15.5px;position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--amber);transition:.25s}
+nav a:hover::after{width:100%}
+.head-cta{display:flex;align-items:center;gap:18px}
+.head-phone{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:8px}
+.head-phone svg{width:17px;color:var(--sky)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0}
+
+/* hero */
+.hero{position:relative;padding:70px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font:600 15px/1.4 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sky-deep);margin-bottom:22px;display:flex;gap:12px;align-items:center}
+.hero h1::before{content:"";width:34px;height:2px;background:var(--amber)}
+.hero .display{font:800 clamp(52px,7.4vw,104px)/.92 var(--display);letter-spacing:-.035em}
+.hero .display em{font:italic 500 1em/1 var(--serif);color:var(--sky);letter-spacing:-.02em}
+.hero .lead{font-size:19px;color:var(--ink-2);max-width:500px;margin:28px 0 36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-facts{display:flex;gap:34px;margin-top:46px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero-facts div{font-size:14px;color:var(--ink-2)}
+.hero-facts strong{display:block;font:700 18px/1.3 var(--display);color:var(--ink)}
+
+.wings{position:relative;height:620px}
+.wing{position:absolute;overflow:hidden;box-shadow:0 30px 60px -25px rgba(13,31,45,.45)}
+.wing img{width:100%;height:100%;object-fit:cover}
+.wing-a{width:64%;height:74%;right:0;top:0;clip-path:polygon(10% 0,100% 0,100% 88%,0 100%)}
+.wing-b{width:50%;height:52%;left:0;bottom:30px;clip-path:polygon(0 8%,100% 0,90% 100%,0 100%)}
+.wing-c{width:30%;height:34%;right:4%;bottom:0;clip-path:polygon(0 0,100% 12%,100% 100%,14% 100%)}
+.wing-mark{position:absolute;left:30%;top:6%;width:120px;opacity:.9}
+.wing-label{position:absolute;left:4%;top:15%;background:#fff;padding:14px 18px;border-left:3px solid var(--amber);font-size:13px;color:var(--ink-2);max-width:200px;box-shadow:0 14px 30px -14px rgba(13,31,45,.3)}
+.wing-label b{display:block;font:700 15px/1.3 var(--display);color:var(--ink)}
+
+.ticker{margin-top:70px;background:var(--sky);color:#fff;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:56px;padding:18px 0;animation:tick 34s linear infinite;font:600 20px/1 var(--display)}
+.ticker-track span{display:inline-flex;align-items:center;gap:56px}
+.ticker-track span::after{content:"";width:9px;height:9px;background:var(--amber);transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* services index */
+.services{padding:120px 0 110px}
+.sv-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
+.sv-head h2{font:800 clamp(36px,4.4vw,58px)/1.02 var(--display);letter-spacing:-.03em;margin-top:16px}
+.sv-head p{color:var(--ink-2);font-size:18px;max-width:470px}
+.sv-body{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:start}
+.sv-list{list-style:none;border-top:1px solid var(--ink)}
+.sv-item{border-bottom:1px solid var(--line)}
+.sv-item a{display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;padding:30px 8px;transition:.3s}
+.sv-num{font:500 italic 22px/1 var(--serif);color:var(--amber)}
+.sv-item h3{font:700 clamp(22px,2.3vw,30px)/1.15 var(--display);letter-spacing:-.015em}
+.sv-item p{color:var(--ink-2);font-size:15.5px;margin-top:6px;max-height:0;opacity:0;overflow:hidden;transition:.35s}
+.sv-go{width:48px;height:48px;border:1.5px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:.3s}
+.sv-go svg{width:18px}
+.sv-item.active a,.sv-item a:hover{background:#fff;padding-left:22px}
+.sv-item.active p,.sv-item a:hover p{max-height:80px;opacity:1}
+.sv-item.active .sv-go,.sv-item a:hover .sv-go{background:var(--amber);border-color:var(--amber);color:#fff;transform:rotate(-45deg)}
+.sv-thumb{display:none}
+.sv-stage{position:sticky;top:120px;height:540px}
+.sv-stage figure{position:absolute;inset:0;opacity:0;transition:opacity .5s, transform .6s;transform:scale(1.03)}
+.sv-stage figure.on{opacity:1;transform:none}
+.sv-stage img{width:100%;height:100%;object-fit:cover;clip-path:polygon(0 0,100% 4%,100% 100%,0 96%)}
+.sv-stage figcaption{position:absolute;left:-28px;bottom:48px;background:var(--ink);color:#fff;padding:14px 20px;font:600 14px/1.3 var(--body);letter-spacing:.04em}
+.sv-stage figcaption span{color:var(--amber)}
+.sv-all{margin-top:36px}
+
+/* proof */
+.proof{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.proof-grid{display:grid;grid-template-columns:.9fr 1.1fr;min-height:620px}
+.proof-img{position:relative}
+.proof-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,var(--ink))}
+.proof-copy{padding:100px 6vw 90px 40px;display:flex;flex-direction:column;justify-content:center}
+.proof .tag{color:#9CC9E8}
+.proof h2{font:700 clamp(30px,3.2vw,42px)/1.1 var(--display);margin:16px 0 40px;letter-spacing:-.02em;max-width:520px}
+.quote{position:relative;padding-left:34px;border-left:3px solid var(--amber)}
+.quote p{font:italic 400 clamp(40px,5vw,68px)/1.05 var(--serif);color:#fff}
+.quote cite{display:block;margin-top:18px;font:600 15px/1 var(--body);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.proof-row{display:flex;gap:28px;align-items:center;margin-top:54px;flex-wrap:wrap}
+.cert{display:flex;gap:18px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:14px 20px 14px 14px;border-radius:4px}
+.cert img{width:110px;border-radius:2px}
+.cert b{display:block;font:700 16px/1.3 var(--display)}
+.cert span{font-size:13.5px;color:#AFC2D0}
+.proof .btn-line{border-color:rgba(255,255,255,.5);color:#fff}
+.proof .btn-line:hover{background:#fff;color:var(--ink)}
+
+/* gallery */
+.gallery{padding:120px 0 100px;background:var(--mist)}
+.gal-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.gal-head h2{font:800 clamp(36px,4.4vw,58px)/1.02 var(--display);letter-spacing:-.03em;margin-top:16px;max-width:640px}
+.gal-ctrl{display:flex;gap:10px}
+.gal-ctrl button{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--ink);background:none;cursor:pointer;display:grid;place-items:center;transition:.25s}
+.gal-ctrl button:hover{background:var(--ink);color:#fff}
+.gal-ctrl svg{width:20px}
+.strip{display:grid;grid-auto-flow:column;grid-template-rows:260px 260px;grid-auto-columns:260px;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 4vw 20px;scrollbar-width:none;cursor:grab}
+.strip::-webkit-scrollbar{display:none}
+.shot{position:relative;overflow:hidden;scroll-snap-align:start;background:#cfd8df}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.shot:hover img{transform:scale(1.06)}
+.shot.tall{grid-row:span 2}
+.shot.wide{grid-column:span 2}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(13,31,45,.82));color:#fff;font-size:13.5px;font-weight:600;letter-spacing:.03em;opacity:0;transform:translateY(8px);transition:.3s}
+.shot:hover figcaption{opacity:1;transform:none}
+.gal-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.gal-links a{font-size:14px;font-weight:600;padding:9px 16px;border:1px solid var(--line);border-radius:40px;background:#fff;transition:.2s}
+.gal-links a:hover{border-color:var(--sky);color:var(--sky-deep)}
+
+/* areas */
+.areas{padding:120px 0}
+.areas-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.areas-visual{position:relative}
+.areas-visual img{width:100%;height:600px;object-fit:cover;clip-path:polygon(0 0,92% 0,100% 100%,0 100%)}
+.areas-badge{position:absolute;right:-30px;top:60px;background:var(--amber);color:#fff;padding:26px 28px;max-width:220px}
+.areas-badge b{display:block;font:800 30px/1 var(--display);margin-bottom:6px}
+.areas-badge span{font-size:14px}
+.areas h2{font:800 clamp(34px,4vw,52px)/1.04 var(--display);letter-spacing:-.03em;margin:16px 0 18px}
+.areas-intro{color:var(--ink-2);font-size:18px;max-width:520px;margin-bottom:36px}
+.towns{list-style:none;columns:2;column-gap:44px}
+.towns li{break-inside:avoid;display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px dashed var(--line);font:600 20px/1.2 var(--display)}
+.towns li small{font:400 13px/1 var(--body);color:var(--ink-2);margin-left:auto}
+.towns li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sky);flex:none;transform:translateY(-2px)}
+.towns li.hq::before{background:var(--amber)}
+
+/* contact */
+.contact{padding:0 0 120px}
+.contact-box{background:#fff;display:grid;grid-template-columns:.95fr 1.05fr;box-shadow:0 40px 80px -50px rgba(13,31,45,.4)}
+.contact-left{background:var(--sky);color:#fff;padding:70px 56px;position:relative;overflow:hidden}
+.contact-left::after{content:"";position:absolute;right:-90px;bottom:-90px;width:300px;height:300px;border:40px solid rgba(255,255,255,.08);transform:rotate(45deg)}
+.contact-left .tag{color:#fff}
+.contact-left h2{font:800 clamp(32px,3.4vw,46px)/1.05 var(--display);letter-spacing:-.025em;margin:16px 0 36px}
+.channel{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:center;padding:20px 0;border-top:1px solid rgba(255,255,255,.25);position:relative;z-index:1}
+.channel i{width:52px;height:52px;border-radius:50%;background:#fff;color:var(--sky-deep);display:grid;place-items:center}
+.channel i svg{width:22px}
+.channel h3{font:700 19px/1.2 var(--display)}
+.channel span{font-size:15px;opacity:.9}
+.channel:hover h3{color:var(--ink)}
+.hours{margin-top:30px;font-size:14.5px;position:relative;z-index:1;opacity:.95}
+.hours b{font-weight:700}
+.quote-form{padding:70px 56px}
+.quote-form h3{font:800 30px/1.1 var(--display);letter-spacing:-.02em}
+.quote-form > p{color:var(--ink-2);margin:10px 0 30px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.field input,.field select,.field textarea{font:16px var(--body);padding:14px 16px;border:1.5px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--sky);background:#fff}
+.field textarea{min-height:110px;resize:vertical}
+.quote-form .btn{margin-top:22px;border:0;cursor:pointer;width:100%;justify-content:center;font-size:16px}
+.form-note{font-size:13px;color:var(--ink-2);margin-top:12px;text-align:center}
+
+/* footer */
+footer{background:var(--ink);color:#B7C6D2;padding:80px 0 0;font-size:15px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px;padding-bottom:60px}
+.ft-brand img{height:44px;width:auto;margin-bottom:22px}
+.ft-brand p{max-width:300px}
+.ft-social{display:flex;gap:10px;margin-top:22px}
+.ft-social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.2s}
+.ft-social a:hover{background:var(--amber);border-color:var(--amber);color:#fff}
+.ft-social svg{width:18px}
+footer h4{font:700 15px/1 var(--display);color:#fff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
+footer ul{list-style:none;display:grid;gap:11px}
+footer a:hover{color:var(--amber)}
+.ft-bottom{border-top:1px solid rgba(255,255,255,.12);padding:24px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
+.ft-bottom a{color:#fff;font-weight:600}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1080px){
+  nav ul{gap:20px}
+  .head-phone{display:none}
+  .hero-grid,.sv-head,.sv-body,.areas-grid,.contact-box{grid-template-columns:1fr}
+  .wings{height:520px}
+  .sv-stage{display:none}
+  .sv-thumb{display:block;grid-column:1/-1;height:200px;overflow:hidden;margin-top:6px}
+  .sv-thumb img{width:100%;height:100%;object-fit:cover}
+  .sv-item p{max-height:none;opacity:1}
+  .proof-grid{grid-template-columns:1fr}
+  .proof-img{height:380px}
+  .proof-img::after{background:linear-gradient(180deg,transparent 50%,var(--ink))}
+  .proof-copy{padding:40px 6vw 80px}
+  .areas-badge{right:16px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:16px 4vw 24px}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:14px}
+  .burger{display:block}
+  .head-cta .btn{display:none}
+  .util .left{display:none}
+  .util .wrap{justify-content:center}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .hero{padding-top:44px}
+  .wings{height:400px}
+  .wing-label{display:none}
+  .sv-item a{grid-template-columns:44px 1fr auto;padding:24px 4px}
+  .strip{grid-template-rows:200px 200px;grid-auto-columns:200px}
+  .towns{columns:1}
+  .areas-visual img{height:380px}
+  .contact-left,.quote-form{padding:48px 26px}
+  .fgrid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .util .right{gap:14px;font-size:12.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div class="left"><span><b>Mon to Fri</b> 8:30 am to 7:00 pm</span> &nbsp;·&nbsp; <span>License #8131764</span></div>
+    <div class="right">
+      <a href="tel:+14036198966">(403) 619-8966</a>
+      <a href="mailto:dragonflycustomcleaning@gmail.com">dragonflycustomcleaning@gmail.com</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo"><img src="images/dragonfly-logo.png" alt="Dragonfly Custom Cleaning logo"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#areas">Areas we serve</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="head-cta">
+      <a href="tel:+14036198966" class="head-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(403) 619-8966</a>
+      <a href="#contact" class="btn btn-amber">Get a Quote</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="about">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <h1>Professional Cleaning Services in Calgary, AB</h1>
+      <p class="display">Fly into a <em>cleaner</em> space.</p>
+      <p class="lead">Our team delivers commercial and residential cleaning tailored to your needs, from high-end homes and post construction cleanup to carpets, so your space looks like new.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-amber">Request a Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        <a href="tel:+14036198966" class="btn btn-line">Call (403) 619-8966</a>
+      </div>
+      <div class="hero-facts">
+        <div><strong>Homes &amp; Businesses</strong>Residential and commercial</div>
+        <div><strong>10 Communities</strong>Calgary and area</div>
+        <div><strong>CleanCheck Trained</strong>License #8131764</div>
+      </div>
+    </div>
+    <div class="wings rv">
+      <div class="wing wing-a"><img src="images/luxury-kitchen.jpg" alt="Spotless high-end kitchen after residential cleaning"></div>
+      <div class="wing wing-b"><img src="images/living-room.jpg" alt="Clean luxury living room with fireplace"></div>
+      <div class="wing wing-c"><img src="images/commercial-lights.jpg" alt="Commercial space cleaned by Dragonfly"></div>
+      <div class="wing-label"><b>No job too small</b>Homes and offices across the Calgary area</div>
+    </div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>High-end Residential Cleaning</span><span>Commercial and Office Cleaning</span><span>Post Construction Cleaning</span><span>Carpet Cleaning</span><span>High-Rise Building Cleaning</span>
+      <span>High-end Residential Cleaning</span><span>Commercial and Office Cleaning</span><span>Post Construction Cleaning</span><span>Carpet Cleaning</span><span>High-Rise Building Cleaning</span>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sv-head rv">
+      <div>
+        <span class="tag">Our Services</span>
+        <h2>Expert Cleaning Services for Homes and Businesses</h2>
+      </div>
+      <p>Whether it's a luxury home, a busy office or a freshly renovated space, we tailor every clean to the property and the people who use it.</p>
+    </div>
+    <div class="sv-body">
+      <div>
+        <ul class="sv-list">
+          <li class="sv-item active" data-img="0">
+            <a href="#contact">
+              <span class="sv-num">01</span>
+              <div><h3>High-end Residential Cleaning</h3><p>Premium cleaning for your home, delivered as a true luxury experience.</p></div>
+              <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="sv-thumb"><img src="images/living-room.jpg" alt="" loading="lazy"></div>
+            </a>
+          </li>
+          <li class="sv-item" data-img="1">
+            <a href="#contact">
+              <span class="sv-num">02</span>
+              <div><h3>Commercial and Office Cleaning</h3><p>Spotless business spaces that help your company look its best.</p></div>
+              <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="sv-thumb"><img src="images/office-floor.jpg" alt="" loading="lazy"></div>
+            </a>
+          </li>
+          <li class="sv-item" data-img="2">
+            <a href="#contact">
+              <span class="sv-num">03</span>
+              <div><h3>Post Construction Cleaning</h3><p>We clear the dust and mess left behind after construction or renovation work.</p></div>
+              <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="sv-thumb"><img src="images/post-construction-team.jpg" alt="" loading="lazy"></div>
+            </a>
+          </li>
+          <li class="sv-item" data-img="3">
+            <a href="#contact">
+              <span class="sv-num">04</span>
+              <div><h3>Carpet Cleaning by Lotus Carpet Cleaning</h3><p>Expert carpet cleaning that brings back the look of your carpets.</p></div>
+              <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="sv-thumb"><img src="images/shelving-room.jpg" alt="" loading="lazy"></div>
+            </a>
+          </li>
+          <li class="sv-item" data-img="4">
+            <a href="#contact">
+              <span class="sv-num">05</span>
+              <div><h3>High-Rise Building Cleaning</h3><p>Exterior cleaning services for high-rise buildings.</p></div>
+              <span class="sv-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+              <div class="sv-thumb"><img src="images/atrium-commercial.jpg" alt="" loading="lazy"></div>
+            </a>
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn-line sv-all">View all services</a>
+      </div>
+      <div class="sv-stage" aria-hidden="true">
+        <figure class="on"><img src="images/living-room.jpg" alt=""><figcaption><span>01</span> &nbsp;Residential</figcaption></figure>
+        <figure><img src="images/office-floor.jpg" alt=""><figcaption><span>02</span> &nbsp;Commercial &amp; Office</figcaption></figure>
+        <figure><img src="images/post-construction-team.jpg" alt=""><figcaption><span>03</span> &nbsp;Post Construction</figcaption></figure>
+        <figure><img src="images/shelving-room.jpg" alt=""><figcaption><span>04</span> &nbsp;Carpet Cleaning</figcaption></figure>
+        <figure><img src="images/atrium-commercial.jpg" alt=""><figcaption><span>05</span> &nbsp;High-Rise Buildings</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="reviews">
+  <div class="proof-grid">
+    <div class="proof-img"><img src="images/dragonfly-sunset.jpg" alt="Dragonfly resting on a flower stem at sunset"></div>
+    <div class="proof-copy rv">
+      <span class="tag">Reviews</span>
+      <h2>See Why Customers Love Our Cleaning Services</h2>
+      <blockquote class="quote">
+        <p>“What a treat...”</p>
+        <cite>Brian F.</cite>
+      </blockquote>
+      <div class="proof-row">
+        <div class="cert">
+          <img src="images/cleancheck-certificate.png" alt="CleanCheck Training System certificate for Dragonfly Custom Cleaning Inc." loading="lazy">
+          <div><b>CleanCheck Training System</b><span>Certified team · License #8131764</span></div>
+        </div>
+        <a href="#reviews" class="btn btn-line">View all reviews</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap gal-head rv">
+    <div>
+      <span class="tag">Our Work</span>
+      <h2>See the Sparkle in Our Finished Projects</h2>
+    </div>
+    <div class="gal-ctrl">
+      <button aria-label="Previous" onclick="slide(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 5l-7 7 7 7"/></svg></button>
+      <button aria-label="Next" onclick="slide(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="strip" id="strip">
+    <figure class="shot tall wide"><img src="images/spiral-staircase.jpg" alt="Residential deep cleaning, spiral staircase home" loading="lazy"><figcaption>Residential deep cleaning</figcaption></figure>
+    <figure class="shot"><img src="images/fireplace-mirror.jpg" alt="Clean living space with fireplace" loading="lazy"><figcaption>Residential deep cleaning</figcaption></figure>
+    <figure class="shot"><img src="images/washroom.jpg" alt="Commercial washroom cleaning" loading="lazy"><figcaption>Commercial cleaning</figcaption></figure>
+    <figure class="shot tall"><img src="images/shelving-hallway.jpg" alt="Post-renovation cleanup of shelving hallway" loading="lazy"><figcaption>Post-renovation cleanup</figcaption></figure>
+    <figure class="shot wide"><img src="images/window-bench.jpg" alt="Clean window bench and hardwood floors" loading="lazy"><figcaption>Residential deep cleaning</figcaption></figure>
+    <figure class="shot"><img src="images/commercial-ladder.jpg" alt="Commercial janitorial work in progress" loading="lazy"><figcaption>Commercial cleaning</figcaption></figure>
+    <figure class="shot"><img src="images/vanity-detail.jpg" alt="Washroom vanity detail cleaning" loading="lazy"><figcaption>Post-renovation cleanup</figcaption></figure>
+    <figure class="shot tall"><img src="images/floor-renovation.jpg" alt="Post construction floor cleanup" loading="lazy"><figcaption>Post-renovation cleanup</figcaption></figure>
+    <figure class="shot wide"><img src="images/garage-clean.jpg" alt="Cleaned garage space" loading="lazy"><figcaption>Professional cleaning services</figcaption></figure>
+    <figure class="shot tall"><img src="images/office-setup.jpg" alt="Commercial office being cleaned" loading="lazy"><figcaption>Commercial cleaning</figcaption></figure>
+    <figure class="shot"><img src="images/luxury-kitchen.jpg" alt="Luxury kitchen cleaning" loading="lazy"><figcaption>Residential deep cleaning</figcaption></figure>
+  </div>
+  <div class="wrap">
+    <div class="gal-links">
+      <a href="#contact">Professional cleaning services</a>
+      <a href="#contact">Commercial cleaning</a>
+      <a href="#contact">Residential deep cleaning</a>
+      <a href="#contact">Post-renovation cleanup</a>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="wrap areas-grid">
+    <div class="areas-visual rv">
+      <img src="images/chandelier-room.jpg" alt="Bright, clean home in the Calgary area" loading="lazy">
+      <div class="areas-badge"><b>No job too small</b><span>Homes and offices, big or small</span></div>
+    </div>
+    <div class="rv">
+      <span class="tag">Areas we serve</span>
+      <h2>Proudly Cleaning Homes and Offices Across Calgary Area</h2>
+      <p class="areas-intro">Based in Calgary, our team serves the city and the surrounding communities.</p>
+      <ul class="towns">
+        <li class="hq">Calgary <small>Home base</small></li>
+        <li>Airdrie</li>
+        <li>Black Diamond</li>
+        <li>Chestermere</li>
+        <li>Cochrane</li>
+        <li>Crossfield</li>
+        <li>High River</li>
+        <li>Okotoks</li>
+        <li>Strathmore</li>
+        <li>Turner Valley</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box rv">
+      <div class="contact-left">
+        <span class="tag">Contact Us</span>
+        <h2>Discover Cleaning Services Tailored to Your Needs</h2>
+        <a class="channel" href="tel:+14036198966">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i>
+          <div><h3>Call us</h3><span>(403) 619-8966</span></div>
+        </a>
+        <a class="channel" href="https://www.facebook.com/people/Dragonfly-Custom-Cleaning/100054444102403/" target="_blank" rel="noopener">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.2a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.4 8.4 0 0 1 8.5 8z"/></svg></i>
+          <div><h3>Chat live</h3><span>Chat with us</span></div>
+        </a>
+        <a class="channel" href="mailto:dragonflycustomcleaning@gmail.com">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></i>
+          <div><h3>Send us an email</h3><span>dragonflycustomcleaning@gmail.com</span></div>
+        </a>
+        <p class="hours"><b>Monday to Friday:</b> 8:30 am to 7:00 pm<br><b>Saturday and Sunday:</b> Closed</p>
+      </div>
+      <form class="quote-form" id="quoteForm">
+        <h3>Request a Free Quote</h3>
+        <p>Tell us about your space and we'll get back to you.</p>
+        <div class="fgrid">
+          <div class="field"><label for="qName">Full name</label><input id="qName" required></div>
+          <div class="field"><label for="qPhone">Phone</label><input id="qPhone" type="tel" required></div>
+          <div class="field full"><label for="qEmail">Email</label><input id="qEmail" type="email" required></div>
+          <div class="field"><label for="qService">Service</label>
+            <select id="qService">
+              <option>High-end Residential Cleaning</option>
+              <option>Commercial and Office Cleaning</option>
+              <option>Post Construction Cleaning</option>
+              <option>Carpet Cleaning</option>
+              <option>High-Rise Building Cleaning</option>
+            </select>
+          </div>
+          <div class="field"><label for="qArea">Location</label>
+            <select id="qArea">
+              <option>Calgary</option><option>Airdrie</option><option>Black Diamond</option><option>Chestermere</option><option>Cochrane</option><option>Crossfield</option><option>High River</option><option>Okotoks</option><option>Strathmore</option><option>Turner Valley</option>
+            </select>
+          </div>
+          <div class="field full"><label for="qMsg">Tell us about the job</label><textarea id="qMsg"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-amber">Send My Quote Request</button>
+        <p class="form-note">Prefer to talk? Call (403) 619-8966</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <img src="images/dragonfly-logo.png" alt="Dragonfly Custom Cleaning">
+        <p>Fly into a cleaner space. Professional residential and commercial cleaning in Calgary, AB.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/people/Dragonfly-Custom-Cleaning/100054444102403/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">High-end Residential Cleaning</a></li>
+          <li><a href="#services">Commercial and Office Cleaning</a></li>
+          <li><a href="#services">Post Construction Cleaning</a></li>
+          <li><a href="#services">Carpet Cleaning by Lotus</a></li>
+          <li><a href="#services">High-Rise Building Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#areas">Areas we serve</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="tel:+14036198966">(403) 619-8966</a></li>
+          <li><a href="mailto:dragonflycustomcleaning@gmail.com">dragonflycustomcleaning@gmail.com</a></li>
+          <li>Mon to Fri: 8:30 am to 7:00 pm</li>
+          <li>Sat and Sun: Closed</li>
+          <li>License #8131764</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© <span id="yr">2026</span> Dragonfly Custom Cleaning Inc. All rights reserved.</span>
+      <span>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// service hover swap
+const items=document.querySelectorAll('.sv-item'),figs=document.querySelectorAll('.sv-stage figure');
+items.forEach(it=>it.addEventListener('mouseenter',()=>{
+  items.forEach(i=>i.classList.remove('active'));it.classList.add('active');
+  figs.forEach((f,i)=>f.classList.toggle('on',i==it.dataset.img));
+}));
+// gallery
+const strip=document.getElementById('strip');
+function slide(d){strip.scrollBy({left:d*560,behavior:'smooth'})}
+let down=false,sx,sl;
+strip.addEventListener('mousedown',e=>{down=true;sx=e.pageX;sl=strip.scrollLeft;strip.style.scrollSnapType='none'});
+window.addEventListener('mouseup',()=>{down=false;strip.style.scrollSnapType=''});
+strip.addEventListener('mousemove',e=>{if(!down)return;e.preventDefault();strip.scrollLeft=sl-(e.pageX-sx)});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// quote form -> email
+document.getElementById('quoteForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value;
+  const body=`Name: ${v('qName')}\nPhone: ${v('qPhone')}\nEmail: ${v('qEmail')}\nService: ${v('qService')}\nLocation: ${v('qArea')}\n\n${v('qMsg')}`;
+  location.href='mailto:dragonflycustomcleaning@gmail.com?subject='+encodeURIComponent('Quote request: '+v('qService'))+'&body='+encodeURIComponent(body);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
